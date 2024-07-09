@@ -1,7 +1,7 @@
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 65A628D5
-/// @DnDArgument : "code" "/// @description Insert description here$(13_10)// You can write your code in this editor$(13_10)$(13_10)//Check health$(13_10)if(hp <= 0) {$(13_10)	room_goto(StartScreen)$(13_10)}$(13_10)$(13_10)//Get input$(13_10)var moveX = keyboard_check(ord("D")) - keyboard_check(ord("A"));$(13_10)var moveY = keyboard_check(ord("S")) - keyboard_check(ord("W"));$(13_10)$(13_10)if(keyboard_check(ord("D")) && (!(keyboard_check(ord("W"))) || !(keyboard_check(ord("S"))))){$(13_10)	image_angle = 90;$(13_10)}$(13_10)else if(keyboard_check(ord("A")) && (!(keyboard_check(ord("W"))) || !(keyboard_check(ord("S"))))){$(13_10)	image_angle = -90;$(13_10)}$(13_10)if(keyboard_check(ord("A")) && keyboard_check(ord("W"))){$(13_10)	image_angle = -135;$(13_10)}$(13_10)if(keyboard_check(ord("A")) && keyboard_check(ord("S"))){$(13_10)	image_angle = -45;$(13_10)}$(13_10)if(keyboard_check(ord("D")) && keyboard_check(ord("W"))){$(13_10)	image_angle = 135;$(13_10)}$(13_10)if(keyboard_check(ord("D")) && keyboard_check(ord("S"))){$(13_10)	image_angle = 45;$(13_10)}$(13_10)$(13_10)//Put correct sprite$(13_10)if (moveX != 0 || moveY != 0) {$(13_10)	//sprite_index = spr_PlayerRun;$(13_10)	 $(13_10)} else {$(13_10)	//sprite_index = spr_PlayerIdle;$(13_10)	$(13_10)}$(13_10)$(13_10)//Face character in correct position$(13_10)if (moveX != 0) image_xscale = moveX;$(13_10)$(13_10)//Calculate hsp and vsp$(13_10)hsp = moveX * move_speed$(13_10)vsp = moveY * move_speed$(13_10)$(13_10)//Collision for: Wall$(13_10)if (place_meeting(x + hsp*2, y, obj_Wall)) {$(13_10)	$(13_10)	while(!place_meeting(x + sign(hsp)*2, y, obj_Wall)) {$(13_10)		$(13_10)		x += sign(hsp)$(13_10)	}$(13_10)	$(13_10)	hsp = 0$(13_10)}$(13_10)$(13_10)//Collision for: Crate $(13_10)if (place_meeting(x + hsp*2, y, obj_TreasureChest)) {$(13_10)	$(13_10)	while(!place_meeting(x + sign(hsp)*2, y, obj_TreasureChest)) {$(13_10)		$(13_10)		x += sign(hsp)$(13_10)	}$(13_10)	$(13_10)	hsp = 0$(13_10)}$(13_10)$(13_10)x += hsp$(13_10)$(13_10)if(place_meeting(x, y+vsp*2, obj_Wall)){$(13_10)	while(!place_meeting(x, y+sign(vsp)*2, obj_Wall)){$(13_10)		y += sign(vsp);	$(13_10)	}$(13_10)	vsp = 0;$(13_10)}$(13_10)$(13_10)if(place_meeting(x,( y+vsp)*2, obj_TreasureChest)){$(13_10)	while(!place_meeting(x, y+sign(vsp)*2, obj_TreasureChest)){$(13_10)		y += sign(vsp);	$(13_10)	}$(13_10)	vsp = 0;$(13_10)}$(13_10)$(13_10)y += vsp$(13_10)$(13_10)$(13_10)//Gun stuff$(13_10)cd--;$(13_10)$(13_10)if (cd <= 0 && mouse_check_button(mb_left)) {$(13_10)	cd = cdValue;$(13_10)	audio_play_sound(aBullet, 1, false);$(13_10)	with (instance_create_layer(x, y, "bullets", obj_Bullet)) {$(13_10)		direction = obj_Gun.image_angle;$(13_10)		speed = 8;$(13_10)	}$(13_10)}"
+/// @DnDArgument : "code" "/// @description Insert description here$(13_10)// You can write your code in this editor$(13_10)$(13_10)//Check health$(13_10)if(hp <= 0) {$(13_10)	room_goto(StartScreen)$(13_10)}$(13_10)$(13_10)//Get input$(13_10)var moveX = keyboard_check(ord("D")) - keyboard_check(ord("A"));$(13_10)var moveY = keyboard_check(ord("S")) - keyboard_check(ord("W"));$(13_10)$(13_10)if(keyboard_check(ord("D")) && (!(keyboard_check(ord("W"))) || !(keyboard_check(ord("S"))))){$(13_10)	image_angle = 90;$(13_10)}$(13_10)else if(keyboard_check(ord("A")) && (!(keyboard_check(ord("W"))) || !(keyboard_check(ord("S"))))){$(13_10)	image_angle = -90;$(13_10)}$(13_10)if(keyboard_check(ord("A")) && keyboard_check(ord("W"))){$(13_10)	image_angle = -135;$(13_10)}$(13_10)if(keyboard_check(ord("A")) && keyboard_check(ord("S"))){$(13_10)	image_angle = -45;$(13_10)}$(13_10)if(keyboard_check(ord("D")) && keyboard_check(ord("W"))){$(13_10)	image_angle = 135;$(13_10)}$(13_10)if(keyboard_check(ord("D")) && keyboard_check(ord("S"))){$(13_10)	image_angle = 45;$(13_10)}$(13_10)$(13_10)//Put correct sprite$(13_10)if (moveX != 0 || moveY != 0) {$(13_10)	//sprite_index = spr_PlayerRun;$(13_10)	 $(13_10)} else {$(13_10)	//sprite_index = spr_PlayerIdle;$(13_10)	$(13_10)}$(13_10)$(13_10)//Face character in correct position$(13_10)if (moveX != 0) image_xscale = moveX;$(13_10)$(13_10)//Calculate hsp and vsp$(13_10)hsp = moveX * move_speed$(13_10)vsp = moveY * move_speed$(13_10)$(13_10)$(13_10)if(place_meeting(x, y+vsp, obj_Wall)){$(13_10)	while(!place_meeting(x, y+sign(vsp), obj_Wall)){$(13_10)		y += sign(vsp);	$(13_10)	}$(13_10)	vsp = 0;$(13_10)}$(13_10)$(13_10)if(place_meeting(x,( y+vsp), obj_TreasureChest)){$(13_10)	while(!place_meeting(x, y+sign(vsp), obj_TreasureChest)){$(13_10)		y += sign(vsp);	$(13_10)	}$(13_10)	vsp = 0;$(13_10)}$(13_10)$(13_10)y += vsp$(13_10)$(13_10)$(13_10)$(13_10)//Collision for: Wall$(13_10)if (place_meeting(x + hsp, y, obj_Wall)) {$(13_10)	$(13_10)	while(!place_meeting(x + sign(hsp), y, obj_Wall)) {$(13_10)		$(13_10)		x += sign(hsp)$(13_10)	}$(13_10)	$(13_10)	hsp = 0$(13_10)}$(13_10)$(13_10)//Collision for: Crate $(13_10)if (place_meeting(x + hsp, y, obj_TreasureChest)) {$(13_10)	$(13_10)	while(!place_meeting(x + sign(hsp), y, obj_TreasureChest)) {$(13_10)		$(13_10)		x += sign(hsp)$(13_10)	}$(13_10)	$(13_10)	hsp = 0$(13_10)}$(13_10)$(13_10)x += hsp$(13_10)$(13_10)$(13_10)$(13_10)$(13_10)//Gun stuff$(13_10)cd--;$(13_10)$(13_10)if (cd <= 0 && mouse_check_button(mb_left)) {$(13_10)	cd = cdValue;$(13_10)	audio_play_sound(aBullet, 1, false);$(13_10)	with (instance_create_layer(x, y, "bullets", obj_Bullet)) {$(13_10)		direction = obj_Gun.image_angle;$(13_10)		speed = 8;$(13_10)	}$(13_10)}"
 /// @description Insert description here
 // You can write your code in this editor
 
@@ -49,10 +49,29 @@ if (moveX != 0) image_xscale = moveX;
 hsp = moveX * move_speed
 vsp = moveY * move_speed
 
+
+if(place_meeting(x, y+vsp, obj_Wall)){
+	while(!place_meeting(x, y+sign(vsp), obj_Wall)){
+		y += sign(vsp);	
+	}
+	vsp = 0;
+}
+
+if(place_meeting(x,( y+vsp), obj_TreasureChest)){
+	while(!place_meeting(x, y+sign(vsp), obj_TreasureChest)){
+		y += sign(vsp);	
+	}
+	vsp = 0;
+}
+
+y += vsp
+
+
+
 //Collision for: Wall
-if (place_meeting(x + hsp*2, y, obj_Wall)) {
+if (place_meeting(x + hsp, y, obj_Wall)) {
 	
-	while(!place_meeting(x + sign(hsp)*2, y, obj_Wall)) {
+	while(!place_meeting(x + sign(hsp), y, obj_Wall)) {
 		
 		x += sign(hsp)
 	}
@@ -61,9 +80,9 @@ if (place_meeting(x + hsp*2, y, obj_Wall)) {
 }
 
 //Collision for: Crate 
-if (place_meeting(x + hsp*2, y, obj_TreasureChest)) {
+if (place_meeting(x + hsp, y, obj_TreasureChest)) {
 	
-	while(!place_meeting(x + sign(hsp)*2, y, obj_TreasureChest)) {
+	while(!place_meeting(x + sign(hsp), y, obj_TreasureChest)) {
 		
 		x += sign(hsp)
 	}
@@ -73,21 +92,7 @@ if (place_meeting(x + hsp*2, y, obj_TreasureChest)) {
 
 x += hsp
 
-if(place_meeting(x, y+vsp*2, obj_Wall)){
-	while(!place_meeting(x, y+sign(vsp)*2, obj_Wall)){
-		y += sign(vsp);	
-	}
-	vsp = 0;
-}
 
-if(place_meeting(x,( y+vsp)*2, obj_TreasureChest)){
-	while(!place_meeting(x, y+sign(vsp)*2, obj_TreasureChest)){
-		y += sign(vsp);	
-	}
-	vsp = 0;
-}
-
-y += vsp
 
 
 //Gun stuff

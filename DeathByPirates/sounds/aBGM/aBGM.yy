@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"aBGM",
+  "%Name":"aBgm",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -9,8 +9,8 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":175.59511,
-  "name":"aBGM",
+  "duration":153.88734,
+  "name":"aBgm",
   "parent":{
     "name":"Sounds",
     "path":"folders/Sounds.yy",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"aBGM.mp3",
+  "soundFile":"aBgm.mp3",
   "type":0,
-  "volume":0.41,
+  "volume":1.0,
 }
