@@ -1,3 +1,21 @@
+/// @DnDAction : YoYo Games.Audio.If_Audio_Playing
+/// @DnDVersion : 1
+/// @DnDHash : 7BA4F5D6
+/// @DnDArgument : "soundid" "aGashedEnemy"
+/// @DnDArgument : "not" "1"
+/// @DnDSaveInfo : "soundid" "aGashedEnemy"
+var l7BA4F5D6_0 = aGashedEnemy;
+if (!audio_is_playing(l7BA4F5D6_0))
+{
+	/// @DnDAction : YoYo Games.Audio.Play_Audio
+	/// @DnDVersion : 1.1
+	/// @DnDHash : 2A70105F
+	/// @DnDParent : 7BA4F5D6
+	/// @DnDArgument : "soundid" "aGashedEnemy"
+	/// @DnDSaveInfo : "soundid" "aGashedEnemy"
+	audio_play_sound(aGashedEnemy, 0, 0, 1.0, undefined, 1.0);
+}
+
 /// @DnDAction : YoYo Games.Particles.Effect
 /// @DnDVersion : 1
 /// @DnDHash : 595203E6
