@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_CrowEnemy",
+  "%Name":"obj_EelEnemy",
   "eventList":[],
   "managed":true,
-  "name":"obj_CrowEnemy",
+  "name":"obj_EelEnemy",
   "overriddenProperties":[],
   "parent":{
     "name":"Enemies",
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_Enemy",
-    "path":"sprites/spr_Enemy/spr_Enemy.yy",
+    "name":"spr_Enemy_1",
+    "path":"sprites/spr_Enemy_1/spr_Enemy_1.yy",
   },
   "spriteMaskId":null,
   "visible":true,

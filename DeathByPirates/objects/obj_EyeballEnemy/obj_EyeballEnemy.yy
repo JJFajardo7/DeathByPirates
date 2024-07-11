@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_DeathBringerEnemy",
+  "%Name":"obj_EyeballEnemy",
   "eventList":[],
   "managed":true,
-  "name":"obj_DeathBringerEnemy",
+  "name":"obj_EyeballEnemy",
   "overriddenProperties":[],
   "parent":{
     "name":"Enemies",
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_Enemy_3",
-    "path":"sprites/spr_Enemy_3/spr_Enemy_3.yy",
+    "name":"spr_Enemy_2",
+    "path":"sprites/spr_Enemy_2/spr_Enemy_2.yy",
   },
   "spriteMaskId":null,
   "visible":true,

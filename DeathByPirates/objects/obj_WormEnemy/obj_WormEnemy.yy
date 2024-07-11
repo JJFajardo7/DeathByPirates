@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_DeathBringerEnemy",
+  "%Name":"obj_WormEnemy",
   "eventList":[],
   "managed":true,
-  "name":"obj_DeathBringerEnemy",
+  "name":"obj_WormEnemy",
   "overriddenProperties":[],
   "parent":{
     "name":"Enemies",
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_Enemy_3",
-    "path":"sprites/spr_Enemy_3/spr_Enemy_3.yy",
+    "name":"spr_Enemy",
+    "path":"sprites/spr_Enemy/spr_Enemy.yy",
   },
   "spriteMaskId":null,
   "visible":true,

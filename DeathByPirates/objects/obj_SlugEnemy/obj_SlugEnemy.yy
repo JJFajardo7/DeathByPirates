@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_GoblinEnemy",
+  "%Name":"obj_SlugEnemy",
   "eventList":[],
   "managed":true,
-  "name":"obj_GoblinEnemy",
+  "name":"obj_SlugEnemy",
   "overriddenProperties":[],
   "parent":{
     "name":"Enemies",
@@ -30,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_Enemy_5",
+    "path":"sprites/spr_Enemy_5/spr_Enemy_5.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

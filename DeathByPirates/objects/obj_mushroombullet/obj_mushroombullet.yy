@@ -32,7 +32,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":true,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_EnemyBullet",
+    "path":"sprites/spr_EnemyBullet/spr_EnemyBullet.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

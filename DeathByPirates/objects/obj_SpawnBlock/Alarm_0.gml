@@ -8,16 +8,16 @@ randInt = irandom_range(0, 10)
 var enemy = obj_Enemy;
 
 if (randInt = 0) {
-	enemy = obj_CrowEnemy
+	enemy = obj_WormEnemy
 }
 else if (randInt = 1){
 	enemy = obj_DeathBringerEnemy
 }
 else if (randInt = 2){
-	enemy = obj_FireWormEnemy
+	enemy = obj_EelEnemy
 }
 else if (randInt = 3){
-	enemy = obj_GoblinEnemy
+	enemy = obj_SlugEnemy
 }
 else if (randInt = 4){
 	enemy = obj_StandStillEnemy

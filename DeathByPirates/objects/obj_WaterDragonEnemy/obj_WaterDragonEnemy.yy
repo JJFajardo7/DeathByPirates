@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_FireWormEnemy",
+  "%Name":"obj_WaterDragonEnemy",
   "eventList":[],
   "managed":true,
-  "name":"obj_FireWormEnemy",
+  "name":"obj_WaterDragonEnemy",
   "overriddenProperties":[],
   "parent":{
     "name":"Enemies",
@@ -30,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_Enemy_4",
+    "path":"sprites/spr_Enemy_4/spr_Enemy_4.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
