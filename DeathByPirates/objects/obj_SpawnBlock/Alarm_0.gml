@@ -3,7 +3,7 @@
 //	instance_create_layer(x, y, "Instances", obj_CrowEnemy)
 //}
 
-randInt = irandom_range(0, 10)
+randInt = irandom_range(0, 6)
 
 var enemy = obj_Enemy;
 
@@ -17,11 +17,16 @@ else if (randInt = 2){
 	enemy = obj_EelEnemy
 }
 else if (randInt = 3){
-	enemy = obj_SlugEnemy
+	enemy = obj_EyeballEnemy
 }
 else if (randInt = 4){
-	enemy = obj_StandStillEnemy
+	enemy = obj_SlugEnemy
 }
+else if (randInt = 5){
+	enemy = obj_WaterDragonEnemy
+}
+
+instance_create_layer(x,y,"Instances",enemy)
 
 spawnRate -= spawnRate*.05;
 
